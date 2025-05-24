@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "bed",
+  "key": {
+    "#": {
+      "item": "minecraft:cyan_wool"
+    },
+    "B": {
+      "item": "nomads_rest:white_bedroll"
+    },
+    "X": {
+      "tag": "minecraft:wooden_slabs"
+    }
+  },
+  "pattern": [
+    " B ",
+    "###",
+    "XXX"
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:cyan_bed"
+  }
+}
