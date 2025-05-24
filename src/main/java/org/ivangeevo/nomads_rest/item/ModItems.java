@@ -17,6 +17,7 @@ public class ModItems {
     public static final Item NR_GROUP = registerItem( "nr_group", new Item(new Item.Settings()));
 
     public static final Item WHITE_BEDROLL = registerBedrollItem("white_bedroll", ModBlocks.WHITE_BEDROLL);
+
     //
     public static final Item ORANGE_BEDROLL = registerBedrollItem("white_bedroll", ModBlocks.WHITE_BEDROLL);
     public static final Item MAGENTA_BEDROLL = registerBedrollItem("white_bedroll", ModBlocks.WHITE_BEDROLL);
@@ -35,7 +36,7 @@ public class ModItems {
     public static final Item BLACK_BEDROLL = registerBedrollItem("white_bedroll", ModBlocks.WHITE_BEDROLL);
 
     private static Item registerBedrollItem(String name, Block bedrollBlock) {
-        return new BedItem(bedrollBlock, new Item.Settings().maxCount(1));
+        return registerItem(name, new BedItem(bedrollBlock, new Item.Settings().maxCount(1)));
     }
 
     private static Item registerItem(String name, Item item) {

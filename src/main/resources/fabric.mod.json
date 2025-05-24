@@ -5,10 +5,12 @@
 
   "name": "Nomad's Rest",
   "description": "",
-  "authors": [],
+  "authors": [
+    "ivangeevo"
+  ],
   "contact": {},
 
-  "license": "MIT",
+  "license": "CC-BY-4.0",
   "icon": "assets/nomads_rest/icon.png",
 
   "environment": "*",
