@@ -31,7 +31,6 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider
     }
 
     private void forVanilla() {
-
         // override bed recipes
         addDrop(Blocks.WHITE_BED, this.bedDrops(Items.WHITE_WOOL));
         addDrop(Blocks.ORANGE_BED, this.bedDrops(Items.ORANGE_WOOL));
@@ -67,7 +66,5 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider
     private void forMod() {
         this.addDrop(ModBlocks.WHITE_BEDROLL, (block) -> this.dropsWithProperty(block, BedBlock.PART, BedPart.HEAD));
     }
-
-
 
 }

@@ -15,7 +15,9 @@
 
   "environment": "*",
   "entrypoints": {
-    "fabric-datagen": ["org.ivangeevo.NomadsRestModDataGenerator"],
+    "fabric-datagen": [
+      "org.ivangeevo.ModDataGenerator"
+    ],
     "client": ["org.ivangeevo.nomads_rest.client.NomadsRestModClient"],
     "main": ["org.ivangeevo.nomads_rest.NomadsRestMod"]
   },

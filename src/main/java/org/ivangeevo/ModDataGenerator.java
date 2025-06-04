@@ -7,7 +7,7 @@ import org.ivangeevo.nomads_rest.datagen.ModItemTagProvider;
 import org.ivangeevo.nomads_rest.datagen.ModLootTableProvider;
 import org.ivangeevo.nomads_rest.datagen.ModRecipeProvider;
 
-public class NomadsRestModDataGenerator implements DataGeneratorEntrypoint {
+public class ModDataGenerator implements DataGeneratorEntrypoint {
 
     @Override
     public void onInitializeDataGenerator(FabricDataGenerator fabricDataGenerator) {

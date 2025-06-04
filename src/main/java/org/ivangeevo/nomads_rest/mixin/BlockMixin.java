@@ -23,13 +23,10 @@ public abstract class BlockMixin extends AbstractBlock {
 
     @Inject(method = "onBreak", at = @At("HEAD"))
     private void onBadBreak(World world, BlockPos pos, BlockState state, PlayerEntity player, CallbackInfoReturnable<BlockState> cir) {
-        if (state.isIn(BlockTags.BEDS)) {
-            world.playSound(null, pos, SoundEvents.ENTITY_ZOMBIE_BREAK_WOODEN_DOOR, SoundCategory.BLOCKS,
-                    0.25F, 1.0F + (world.getRandom().nextFloat() * 0.25F)
-            );
-            //world.playSound(x, y, z, "mob.zombie.woodbreak", 0.25F, 1.0F + (world.rand.nextFloat() * 0.25F));
-        }
-
+        if (!state.isIn(BlockTags.BEDS)) return;
+        world.playSound(null, pos, SoundEvents.ENTITY_ZOMBIE_BREAK_WOODEN_DOOR, SoundCategory.BLOCKS,
+                0.25F, 1.0F + (world.getRandom().nextFloat() * 0.25F)
+        );
     }
 
 }
