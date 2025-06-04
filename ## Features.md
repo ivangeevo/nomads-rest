@@ -12,6 +12,11 @@ Nomad’s Rest changes how sleeping works in Minecraft. Beds are no longer porta
 
 ---
 
+### 🛠️ General Bed Mechanics
+- **Beds and bedrolls** both require **supporting blocks underneath** to be placed.
+- If either supporting block is broken, the bed or bedroll will **break automatically**.
+---
+
 ### 🧶 New Item – Bedroll
 - **Bedrolls** are **portable** and **do not set your spawn point**.
 - Useful for **traveling players** and **temporary camps**.

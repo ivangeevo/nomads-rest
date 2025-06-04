@@ -16,7 +16,9 @@ import org.ivangeevo.nomads_rest.block.entity.BedrollBlockEntity;
 
 public class BedrollBlock extends BedBlock {
 
-    private static final VoxelShape BEDROLL_SHAPE = Block.createCuboidShape(0.0D, 0.0D, 0.0D, 16.0D, 3.0D, 16.0D);
+    private static final VoxelShape BEDROLL_SHAPE = Block.createCuboidShape(
+            0.0D, 0.0D, 0.0D, 16.0D, 3.0D, 16.0D
+    );
 
     public BedrollBlock(DyeColor color, Settings settings) {
         super(color, settings);
@@ -35,7 +37,6 @@ public class BedrollBlock extends BedBlock {
     public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
         return new BedrollBlockEntity(pos, state, this.getColor());
     }
-
 
 }
 
