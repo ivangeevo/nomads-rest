@@ -15,16 +15,14 @@
 
   "environment": "*",
   "entrypoints": {
-    "fabric-datagen": [
-      "org.ivangeevo.ModDataGenerator"
-    ],
+    "main": ["org.ivangeevo.nomads_rest.NomadsRestMod"],
     "client": ["org.ivangeevo.nomads_rest.client.NomadsRestModClient"],
-    "main": ["org.ivangeevo.nomads_rest.NomadsRestMod"]
+    "fabric-datagen": ["org.ivangeevo.ModDataGenerator"]
   },
 
   "mixins": [
-    "nomads_rest.mixins.json"
-    ,{
+    "nomads_rest.mixins.json",
+    {
       "config": "nomads_rest.client.mixins.json",
       "environment": "client"
     }
