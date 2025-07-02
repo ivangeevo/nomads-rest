@@ -7,7 +7,7 @@ Nomad’s Rest changes how sleeping works in Minecraft. Beds are no longer porta
 # 💤 Features at a Glance
 
 ### ⏳ Sleeping Changes
-- Sleeping now **speeds up time** instead of skipping to morning.
+- Sleeping now **speeds up time** instead of instantly skipping to morning.
 - Nearby chunks and entities **continue ticking** while you sleep.
 
 ---

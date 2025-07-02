@@ -17,6 +17,10 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
         getOrCreateTagBuilder(ModTags.Blocks.BEDROLLS)
+                .add(ModBlocks.WHITE_BEDROLL);
+
+        /**
+        getOrCreateTagBuilder(ModTags.Blocks.BEDROLLS)
                 .add(ModBlocks.WHITE_BEDROLL)
                 .add(ModBlocks.ORANGE_BEDROLL)
                 .add(ModBlocks.MAGENTA_BEDROLL)
@@ -33,6 +37,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider
                 .add(ModBlocks.GREEN_BEDROLL)
                 .add(ModBlocks.RED_BEDROLL)
                 .add(ModBlocks.BLACK_BEDROLL);
+         **/
 
     }
 }

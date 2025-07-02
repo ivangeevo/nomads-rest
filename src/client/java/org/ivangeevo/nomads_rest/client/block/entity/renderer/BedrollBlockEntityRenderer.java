@@ -32,6 +32,7 @@ import org.ivangeevo.nomads_rest.client.block.entity.model.ModEntityModelLayers;
 public class BedrollBlockEntityRenderer implements BlockEntityRenderer<BedrollBlockEntity>
 {
     private final ModelPart bedHead;
+
     private final ModelPart bedFoot;
 
     public BedrollBlockEntityRenderer(BlockEntityRendererFactory.Context ctx) {
@@ -42,16 +43,22 @@ public class BedrollBlockEntityRenderer implements BlockEntityRenderer<BedrollBl
     public static TexturedModelData getHeadTexturedModelData() {
         ModelData modelData = new ModelData();
         ModelPartData modelPartData = modelData.getRoot();
-        modelPartData.addChild("main", ModelPartBuilder
-                .create().uv(0, 0).cuboid(0.0F, 0.0F, 0.0F, 16.0F, 16.0F, 3.0F), ModelTransform.NONE);
+        modelPartData
+                .addChild("main",
+                        ModelPartBuilder.create()
+                                .uv(0, 0)
+                                .cuboid(0.0F, 0.0F, 0.0F, 16.0F, 16.0F, 3.0F), ModelTransform.NONE);
         return TexturedModelData.of(modelData, 64, 64);
     }
 
     public static TexturedModelData getFootTexturedModelData() {
         ModelData modelData = new ModelData();
         ModelPartData modelPartData = modelData.getRoot();
-        modelPartData.addChild("main", ModelPartBuilder
-                .create().uv(0, 19).cuboid(0.0F, 0.0F, 0.0F, 16.0F, 16.0F, 3.0F), ModelTransform.NONE);
+        modelPartData
+                .addChild("main", ModelPartBuilder
+                        .create()
+                        .uv(0, 19)
+                        .cuboid(0.0F, 0.0F, 0.0F, 16.0F, 16.0F, 3.0F), ModelTransform.NONE);
         return TexturedModelData.of(modelData, 64, 64);
     }
 
@@ -62,9 +69,17 @@ public class BedrollBlockEntityRenderer implements BlockEntityRenderer<BedrollBl
         World world = be.getWorld();
         if (world != null) {
             BlockState blockState = be.getCachedState();
-            DoubleBlockProperties.PropertySource<? extends BedrollBlockEntity> propertySource = DoubleBlockProperties.toPropertySource(ModBlockEntities.BEDROLL, BedrollBlock::getBedPart, BedrollBlock::getOppositePartDirection, ChestBlock.FACING, blockState, world, be.getPos(), (worldx, pos) -> {
-                return false;
-            });
+            DoubleBlockProperties.PropertySource<? extends BedrollBlockEntity> propertySource =
+                    DoubleBlockProperties.toPropertySource(
+                            ModBlockEntities.BEDROLL,
+                            BedrollBlock::getBedPart,
+                            BedrollBlock::getOppositePartDirection,
+                            ChestBlock.FACING,
+                            blockState,
+                            world,
+                            be.getPos(),
+                            (worldx, pos) -> false
+                    );
             int k = ((Int2IntFunction)propertySource.apply(new LightmapCoordinatesRetriever())).get(i);
             this.renderPart(matrixStack, vertexConsumerProvider, blockState.get(BedrollBlock.PART) == BedPart.HEAD ? this.bedHead : this.bedFoot, blockState.get(BedBlock.FACING), spriteIdentifier, k, j, false);
         } else {

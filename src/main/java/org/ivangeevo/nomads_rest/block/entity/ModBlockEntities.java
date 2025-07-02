@@ -12,7 +12,16 @@ public class ModBlockEntities {
     public static BlockEntityType<BedrollBlockEntity> BEDROLL;
 
     public static void registerBlockEntities() {
+        BEDROLL = Registry.register(
+                Registries.BLOCK_ENTITY_TYPE,
+                Identifier.of(NomadsRestMod.MOD_ID, "bedroll"),
+                BlockEntityType.Builder.create(BedrollBlockEntity::new,
+                        ModBlocks.WHITE_BEDROLL
 
+                ).build(null)
+        );
+
+        /**
         BEDROLL = Registry.register(
                 Registries.BLOCK_ENTITY_TYPE,
                 Identifier.of(NomadsRestMod.MOD_ID, "bedroll"),
@@ -36,6 +45,7 @@ public class ModBlockEntities {
 
                 ).build(null)
         );
+         **/
 
     }
 

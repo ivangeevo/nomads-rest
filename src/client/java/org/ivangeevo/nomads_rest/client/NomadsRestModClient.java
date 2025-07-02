@@ -26,6 +26,11 @@ public class NomadsRestModClient implements ClientModInitializer
     public void onInitializeClient() {
 
         // Register the RenderLayer for the Bedroll Block
+        BlockRenderLayerMap.INSTANCE.putBlocks(BEDROLLS_RENDER_LAYER, ModBlocks.WHITE_BEDROLL);
+
+        // Keep for when we implement all different bedroll colors
+        /**
+        // Register the RenderLayer for the Bedroll Block
         BlockRenderLayerMap.INSTANCE.putBlocks(BEDROLLS_RENDER_LAYER,
                 ModBlocks.WHITE_BEDROLL,
                 ModBlocks.ORANGE_BEDROLL,
@@ -44,6 +49,7 @@ public class NomadsRestModClient implements ClientModInitializer
                 ModBlocks.RED_BEDROLL,
                 ModBlocks.BLACK_BEDROLL
         );
+         **/
 
         BlockEntityRendererFactories.register(ModBlockEntities.BEDROLL, BedrollBlockEntityRenderer::new);
 
