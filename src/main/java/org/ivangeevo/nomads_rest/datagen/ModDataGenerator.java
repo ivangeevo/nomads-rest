@@ -1,11 +1,11 @@
-package org.ivangeevo;
+package org.ivangeevo.nomads_rest.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
-import org.ivangeevo.nomads_rest.datagen.ModBlockTagProvider;
-import org.ivangeevo.nomads_rest.datagen.ModItemTagProvider;
-import org.ivangeevo.nomads_rest.datagen.ModLootTableProvider;
-import org.ivangeevo.nomads_rest.datagen.ModRecipeProvider;
+import org.ivangeevo.nomads_rest.datagen.provider.ModBlockTagProvider;
+import org.ivangeevo.nomads_rest.datagen.provider.ModItemTagProvider;
+import org.ivangeevo.nomads_rest.datagen.provider.ModLootTableProvider;
+import org.ivangeevo.nomads_rest.datagen.provider.ModRecipeProvider;
 
 public class ModDataGenerator implements DataGeneratorEntrypoint {
 

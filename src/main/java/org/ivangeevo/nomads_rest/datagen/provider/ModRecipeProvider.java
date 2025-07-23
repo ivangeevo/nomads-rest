@@ -1,4 +1,4 @@
-package org.ivangeevo.nomads_rest.datagen;
+package org.ivangeevo.nomads_rest.datagen.provider;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;

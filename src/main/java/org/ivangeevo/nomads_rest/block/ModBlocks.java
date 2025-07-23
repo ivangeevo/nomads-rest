@@ -37,7 +37,14 @@ public class ModBlocks {
 
 
     private static Block createBedrollBlock(DyeColor color) {
-        return new BedrollBlock(color, AbstractBlock.Settings.create().mapColor(state -> state.get(BedrollBlock.PART) == BedPart.FOOT ? color.getMapColor() : MapColor.WHITE_GRAY).sounds(BlockSoundGroup.WOOD).strength(0.2f).nonOpaque().burnable().pistonBehavior(PistonBehavior.DESTROY));
+        return new BedrollBlock(color, AbstractBlock.Settings.create()
+                .mapColor(state -> state.get(BedrollBlock.PART) == BedPart.FOOT ? color.getMapColor() : MapColor.WHITE_GRAY)
+                .sounds(BlockSoundGroup.WOOD)
+                .strength(0.2f)
+                .nonOpaque()
+                .burnable()
+                .pistonBehavior(PistonBehavior.DESTROY)
+        );
     }
 
     private static Block registerBlock(String name, Block block) {

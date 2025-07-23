@@ -14,6 +14,7 @@ import net.minecraft.world.MutableWorldProperties;
 import net.minecraft.world.World;
 import net.minecraft.world.dimension.DimensionType;
 import net.minecraft.world.tick.TickManager;
+import org.ivangeevo.nomads_rest.util.ServerTickManagerSleepFeedback;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -80,6 +81,10 @@ public abstract class SleepTickWarpMixin extends World {
             }
 
             if (!serverTickManager.isSprinting()) {
+
+                if (serverTickManager instanceof ServerTickManagerSleepFeedback feedback) {
+                    feedback.nomads_rest$setNoFeedbackForSleep(true);
+                }
                 serverTickManager.startSprint((int) sprintTargetTicks);
                 //this.players.forEach(player -> player.sendMessage(Text.of("Skipping the night by sprinting. Wheeeeeee!")));
             }
