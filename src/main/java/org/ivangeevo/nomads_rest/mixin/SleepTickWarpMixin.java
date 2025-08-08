@@ -76,7 +76,6 @@ public abstract class SleepTickWarpMixin extends World {
                 if (this.getGameRules().getBoolean(GameRules.DO_WEATHER_CYCLE) && this.isRaining()) {
                     this.resetWeather();
                 }
-                //this.players.forEach(player -> player.sendMessage(Text.of("Good morning!")));
                 return;
             }
 
@@ -86,7 +85,6 @@ public abstract class SleepTickWarpMixin extends World {
                     feedback.nomads_rest$setNoFeedbackForSleep(true);
                 }
                 serverTickManager.startSprint((int) sprintTargetTicks);
-                //this.players.forEach(player -> player.sendMessage(Text.of("Skipping the night by sprinting. Wheeeeeee!")));
             }
         }
     }
