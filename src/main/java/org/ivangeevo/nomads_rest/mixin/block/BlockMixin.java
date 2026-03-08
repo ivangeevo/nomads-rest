@@ -1,4 +1,4 @@
-package org.ivangeevo.nomads_rest.mixin;
+package org.ivangeevo.nomads_rest.mixin.block;
 
 import net.minecraft.block.*;
 import net.minecraft.entity.player.PlayerEntity;
