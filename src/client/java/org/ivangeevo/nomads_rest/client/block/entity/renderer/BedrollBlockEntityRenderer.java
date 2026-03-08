@@ -64,9 +64,13 @@ public class BedrollBlockEntityRenderer implements BlockEntityRenderer<BedrollBl
 
     public void render(BedrollBlockEntity be, float f, MatrixStack matrixStack, VertexConsumerProvider vertexConsumerProvider, int i, int j) {
         final SpriteIdentifier spriteIdentifier = new SpriteIdentifier(PlayerScreenHandler.BLOCK_ATLAS_TEXTURE,
-                Identifier.of(NomadsRestMod.MOD_ID, "entity/bedroll/" + be.getColor().getName()));
+                Identifier.of(NomadsRestMod.MOD_ID, "entity/bedroll/bedroll"));
 
         World world = be.getWorld();
+
+        int rgb = be.getColor().getFireworkColor();
+        int argb = 0xFF000000 | rgb;
+
         if (world != null) {
             BlockState blockState = be.getCachedState();
             DoubleBlockProperties.PropertySource<? extends BedrollBlockEntity> propertySource =
@@ -81,15 +85,15 @@ public class BedrollBlockEntityRenderer implements BlockEntityRenderer<BedrollBl
                             (worldx, pos) -> false
                     );
             int k = ((Int2IntFunction)propertySource.apply(new LightmapCoordinatesRetriever())).get(i);
-            this.renderPart(matrixStack, vertexConsumerProvider, blockState.get(BedrollBlock.PART) == BedPart.HEAD ? this.bedHead : this.bedFoot, blockState.get(BedBlock.FACING), spriteIdentifier, k, j, false);
+            this.renderPart(matrixStack, vertexConsumerProvider, blockState.get(BedrollBlock.PART) == BedPart.HEAD ? this.bedHead : this.bedFoot, blockState.get(BedBlock.FACING), spriteIdentifier, k, j, false, argb);
         } else {
-            this.renderPart(matrixStack, vertexConsumerProvider, this.bedHead, Direction.SOUTH, spriteIdentifier, i, j, false);
-            this.renderPart(matrixStack, vertexConsumerProvider, this.bedFoot, Direction.SOUTH, spriteIdentifier, i, j, true);
+            this.renderPart(matrixStack, vertexConsumerProvider, this.bedHead, Direction.SOUTH, spriteIdentifier, i, j, false, argb);
+            this.renderPart(matrixStack, vertexConsumerProvider, this.bedFoot, Direction.SOUTH, spriteIdentifier, i, j, true, argb);
         }
 
     }
 
-    private void renderPart(MatrixStack matrices, VertexConsumerProvider vertexConsumers, ModelPart part, Direction direction, SpriteIdentifier sprite, int light, int overlay, boolean isFoot) {
+    private void renderPart(MatrixStack matrices, VertexConsumerProvider vertexConsumers, ModelPart part, Direction direction, SpriteIdentifier sprite, int light, int overlay, boolean isFoot, int color) {
         matrices.push();
         matrices.translate(0.0F, 0.1875F, isFoot ? -1.0F : 0.0F);
         matrices.multiply(RotationAxis.POSITIVE_X.rotationDegrees(90.0F));
@@ -97,7 +101,8 @@ public class BedrollBlockEntityRenderer implements BlockEntityRenderer<BedrollBl
         matrices.multiply(RotationAxis.POSITIVE_Z.rotationDegrees(180.0F + direction.asRotation()));
         matrices.translate(-0.5F, -0.5F, -0.5F);
         VertexConsumer vertexConsumer = sprite.getVertexConsumer(vertexConsumers, RenderLayer::getEntitySolid);
-        part.render(matrices, vertexConsumer, light, overlay);
+        part.render(matrices, vertexConsumer, light, overlay, color);
         matrices.pop();
     }
+
 }

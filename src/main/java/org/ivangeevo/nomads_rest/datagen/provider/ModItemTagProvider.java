@@ -3,6 +3,8 @@ package org.ivangeevo.nomads_rest.datagen.provider;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.registry.RegistryWrapper;
+import org.ivangeevo.nomads_rest.item.ModItems;
+import org.ivangeevo.nomads_rest.tag.ModTags;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -14,25 +16,23 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
-        /**
         getOrCreateTagBuilder(ModTags.Items.BEDROLLS)
-                .add(ModBlocks.WHITE_BEDROLL)
-                .add(ModBlocks.ORANGE_BEDROLL)
-                .add(ModBlocks.MAGENTA_BEDROLL)
-                .add(ModBlocks.LIGHT_BLUE_BEDROLL)
-                .add(ModBlocks.YELLOW_BEDROLL)
-                .add(ModBlocks.LIME_BEDROLL)
-                .add(ModBlocks.PINK_BEDROLL)
-                .add(ModBlocks.GRAY_BEDROLL)
-                .add(ModBlocks.LIGHT_GRAY_BEDROLL)
-                .add(ModBlocks.CYAN_BEDROLL)
-                .add(ModBlocks.PURPLE_BEDROLL)
-                .add(ModBlocks.BLUE_BEDROLL)
-                .add(ModBlocks.BROWN_BEDROLL)
-                .add(ModBlocks.GREEN_BEDROLL)
-                .add(ModBlocks.RED_BEDROLL)
-                .add(ModBlocks.BLACK_BEDROLL);
-         **/
-
+                .add(ModItems.WHITE_BEDROLL)
+                .add(ModItems.ORANGE_BEDROLL)
+                .add(ModItems.MAGENTA_BEDROLL)
+                .add(ModItems.LIGHT_BLUE_BEDROLL)
+                .add(ModItems.YELLOW_BEDROLL)
+                .add(ModItems.LIME_BEDROLL)
+                .add(ModItems.PINK_BEDROLL)
+                .add(ModItems.GRAY_BEDROLL)
+                .add(ModItems.LIGHT_GRAY_BEDROLL)
+                .add(ModItems.CYAN_BEDROLL)
+                .add(ModItems.PURPLE_BEDROLL)
+                .add(ModItems.BLUE_BEDROLL)
+                .add(ModItems.BROWN_BEDROLL)
+                .add(ModItems.GREEN_BEDROLL)
+                .add(ModItems.RED_BEDROLL)
+                .add(ModItems.BLACK_BEDROLL);
     }
+
 }

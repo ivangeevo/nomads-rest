@@ -14,9 +14,9 @@ public class NomadsRestMod implements ModInitializer {
 
     @Override
     public void onInitialize() {
-        ModBlocks.registerModBlocks();
-        ModItems.registerModItems();
-        ModBlockEntities.registerBlockEntities();
+        ModBlocks.register();
+        ModItems.register();
+        ModBlockEntities.register();
     }
 
 }

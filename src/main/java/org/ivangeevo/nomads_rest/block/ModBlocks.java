@@ -18,7 +18,6 @@ import org.ivangeevo.nomads_rest.block.blocks.BedrollBlock;
 public class ModBlocks {
 
     public static final Block WHITE_BEDROLL = registerWithoutItem("white_bedroll", createBedrollBlock(DyeColor.WHITE));
-    //
     public static final Block ORANGE_BEDROLL = registerWithoutItem("orange_bedroll", createBedrollBlock(DyeColor.ORANGE));
     public static final Block MAGENTA_BEDROLL = registerWithoutItem("magenta_bedroll", createBedrollBlock(DyeColor.MAGENTA));
     public static final Block LIGHT_BLUE_BEDROLL = registerWithoutItem("light_blue_bedroll", createBedrollBlock(DyeColor.LIGHT_BLUE));
@@ -34,7 +33,6 @@ public class ModBlocks {
     public static final Block GREEN_BEDROLL = registerWithoutItem("green_bedroll", createBedrollBlock(DyeColor.GREEN));
     public static final Block RED_BEDROLL = registerWithoutItem("red_bedroll", createBedrollBlock(DyeColor.RED));
     public static final Block BLACK_BEDROLL = registerWithoutItem("black_bedroll", createBedrollBlock(DyeColor.BLACK));
-
 
     private static Block createBedrollBlock(DyeColor color) {
         return new BedrollBlock(color, AbstractBlock.Settings.create()
@@ -61,7 +59,8 @@ public class ModBlocks {
                 new BlockItem(block, new Item.Settings()));
     }
 
-    public static void registerModBlocks() {
+    public static void register() {
         NomadsRestMod.LOGGER.debug("Registering ModBlocks for " + NomadsRestMod.MOD_ID);
     }
+
 }

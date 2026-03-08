@@ -1,20 +1,5 @@
 {
   "values": [
-    "nomads_rest:white_bedroll",
-    "nomads_rest:orange_bedroll",
-    "nomads_rest:magenta_bedroll",
-    "nomads_rest:light_blue_bedroll",
-    "nomads_rest:yellow_bedroll",
-    "nomads_rest:lime_bedroll",
-    "nomads_rest:pink_bedroll",
-    "nomads_rest:gray_bedroll",
-    "nomads_rest:light_gray_bedroll",
-    "nomads_rest:cyan_bedroll",
-    "nomads_rest:purple_bedroll",
-    "nomads_rest:blue_bedroll",
-    "nomads_rest:brown_bedroll",
-    "nomads_rest:green_bedroll",
-    "nomads_rest:red_bedroll",
-    "nomads_rest:black_bedroll"
+    "nomads_rest:white_bedroll"
   ]
 }

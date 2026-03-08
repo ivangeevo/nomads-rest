@@ -1,4 +1,4 @@
-package org.ivangeevo.nomads_rest.mixin;
+package org.ivangeevo.nomads_rest.mixin.entity;
 
 import com.mojang.authlib.GameProfile;
 import net.minecraft.entity.player.PlayerEntity;

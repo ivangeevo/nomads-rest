@@ -7,7 +7,7 @@
       "item": "minecraft:blue_wool"
     },
     "B": {
-      "item": "nomads_rest:white_bedroll"
+      "tag": "nomads_rest:bedrolls"
     },
     "X": {
       "tag": "minecraft:wooden_slabs"

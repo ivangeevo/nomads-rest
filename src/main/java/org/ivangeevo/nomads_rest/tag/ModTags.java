@@ -13,20 +13,18 @@ public class ModTags {
 
         public static final TagKey<Block> BEDROLLS = createTag("bedrolls");
 
-
         private static TagKey<Block> createTag(String path) {
             return TagKey.of(RegistryKeys.BLOCK, Identifier.of(NomadsRestMod.MOD_ID, path));
         }
     }
 
-
     public static class Items {
 
         public static final TagKey<Item> BEDROLLS = createTag("bedrolls");
-
 
         private static TagKey<Item> createTag(String path) {
             return TagKey.of(RegistryKeys.ITEM, Identifier.of(NomadsRestMod.MOD_ID, path));
         }
     }
+
 }

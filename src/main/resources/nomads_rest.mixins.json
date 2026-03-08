@@ -4,13 +4,14 @@
   "package": "org.ivangeevo.nomads_rest.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
-    "AbstractBlockMixin",
-    "AbstractBlockStateMixin",
-    "BlockMixin",
-    "ServerPlayerEntityMixin",
     "ServerTickManagerMixin",
     "SleepManagerMixin",
-    "SleepTickWarpMixin"
+    "SleepTickWarpMixin",
+    "block.AbstractBlockMixin",
+    "block.AbstractBlockStateMixin",
+    "block.BlockMixin",
+    "entity.LivingEntityMixin",
+    "entity.ServerPlayerEntityMixin"
   ],
   "injectors": {
     "defaultRequire": 1

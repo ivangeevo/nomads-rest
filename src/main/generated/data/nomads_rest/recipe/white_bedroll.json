@@ -3,10 +3,10 @@
   "category": "misc",
   "ingredients": [
     {
-      "tag": "minecraft:wool"
+      "item": "minecraft:white_wool"
     },
     {
-      "tag": "minecraft:wool"
+      "item": "minecraft:white_wool"
     },
     {
       "tag": "c:strings"
