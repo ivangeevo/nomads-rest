@@ -1,4 +1,4 @@
-## v1.2(dev)
+## v1.2
 + Added colored bedrolls.
 + Changed the screen to go fully black when the player goes to sleep.
 + Changed the recipe for the vanilla bed to be craftable with all different bedrolls. This is for convenience since there are more bedrolls now, and it would just be annoying to have a matching one to craft a same color bed
