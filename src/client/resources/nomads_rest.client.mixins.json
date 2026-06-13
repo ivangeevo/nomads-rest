@@ -1,7 +1,7 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "org.ivangeevo.nomads_rest.client.mixin",
+  "package": "org.btwr.nomads_rest.client.mixin",
   "compatibilityLevel": "JAVA_21",
   "client": [
     "InGameHudMixin"

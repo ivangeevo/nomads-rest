@@ -1,0 +1,23 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "org.btwr.nomads_rest.mixin",
+  "refmap": "${mod_id}.refmap.json",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "ServerLevelMixin",
+    "ServerTickRateManagerMixin",
+    "SleepStatusMixin",
+    "block.BlockBehaviourMixin",
+    "block.BlockMixin",
+    "block.BlockStateBaseMixin",
+    "entity.ServerPlayerMixin"
+  ],
+  "client": [
+    "client.GuiMixin"
+  ],
+  "server": [],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
