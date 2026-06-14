@@ -34,12 +34,15 @@ neoForge {
             sourceSet sourceSets.main
         }
     }
+    dependencies {
+        implementation "dev.emi:emi-neoforge:${emi_version}"
+    }
 }
 
 sourceSets {
     main {
         resources {
-            srcDir project(':common').file('src/generated')
+            srcDir project(':common').file('src/generated/resources')
         }
     }
 }
