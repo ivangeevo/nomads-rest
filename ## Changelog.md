@@ -1,4 +1,5 @@
 ## v1.3(dev)
++ Removed bedrolls from the colored blocks creative inventory tab as it didn't make sense for them to be there
 + Updated the mod to Fabric API 0.116.12 & Fabric Loader 0.19.3
 
 ## v1.2

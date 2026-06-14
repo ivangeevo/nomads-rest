@@ -14,22 +14,43 @@ import org.btwr.nomads_rest.block.ModBlocks;
 
 public class ModItems {
 
-    public static final Item WHITE_BEDROLL = registerBedrollItem("white_bedroll", ModBlocks.WHITE_BEDROLL, DyeColor.WHITE);
-    public static final Item ORANGE_BEDROLL = registerBedrollItem("orange_bedroll", ModBlocks.ORANGE_BEDROLL, DyeColor.ORANGE);
-    public static final Item MAGENTA_BEDROLL = registerBedrollItem("magenta_bedroll", ModBlocks.MAGENTA_BEDROLL, DyeColor.MAGENTA);
-    public static final Item LIGHT_BLUE_BEDROLL = registerBedrollItem("light_blue_bedroll", ModBlocks.LIGHT_BLUE_BEDROLL, DyeColor.LIGHT_BLUE);
-    public static final Item YELLOW_BEDROLL = registerBedrollItem("yellow_bedroll", ModBlocks.YELLOW_BEDROLL, DyeColor.YELLOW);
-    public static final Item LIME_BEDROLL = registerBedrollItem("lime_bedroll", ModBlocks.LIME_BEDROLL, DyeColor.LIME);
-    public static final Item PINK_BEDROLL = registerBedrollItem("pink_bedroll", ModBlocks.PINK_BEDROLL, DyeColor.PINK);
-    public static final Item GRAY_BEDROLL = registerBedrollItem("gray_bedroll", ModBlocks.GRAY_BEDROLL, DyeColor.GRAY);
-    public static final Item LIGHT_GRAY_BEDROLL = registerBedrollItem("light_gray_bedroll", ModBlocks.LIGHT_GRAY_BEDROLL, DyeColor.LIGHT_GRAY);
-    public static final Item CYAN_BEDROLL = registerBedrollItem("cyan_bedroll", ModBlocks.CYAN_BEDROLL, DyeColor.CYAN);
-    public static final Item PURPLE_BEDROLL = registerBedrollItem("purple_bedroll", ModBlocks.PURPLE_BEDROLL, DyeColor.PURPLE);
-    public static final Item BLUE_BEDROLL = registerBedrollItem("blue_bedroll", ModBlocks.BLUE_BEDROLL, DyeColor.BLUE);
-    public static final Item BROWN_BEDROLL = registerBedrollItem("brown_bedroll", ModBlocks.BROWN_BEDROLL, DyeColor.BROWN);
-    public static final Item GREEN_BEDROLL = registerBedrollItem("green_bedroll", ModBlocks.GREEN_BEDROLL, DyeColor.GREEN);
-    public static final Item RED_BEDROLL = registerBedrollItem("red_bedroll", ModBlocks.RED_BEDROLL, DyeColor.RED);
-    public static final Item BLACK_BEDROLL = registerBedrollItem("black_bedroll", ModBlocks.BLACK_BEDROLL, DyeColor.BLACK);
+    public static Item WHITE_BEDROLL;
+    public static Item ORANGE_BEDROLL;
+    public static Item MAGENTA_BEDROLL;
+    public static Item LIGHT_BLUE_BEDROLL;
+    public static Item YELLOW_BEDROLL;
+    public static Item LIME_BEDROLL;
+    public static Item PINK_BEDROLL;
+    public static Item GRAY_BEDROLL;
+    public static Item LIGHT_GRAY_BEDROLL;
+    public static Item CYAN_BEDROLL;
+    public static Item PURPLE_BEDROLL;
+    public static Item BLUE_BEDROLL;
+    public static Item BROWN_BEDROLL;
+    public static Item GREEN_BEDROLL;
+    public static Item RED_BEDROLL;
+    public static Item BLACK_BEDROLL;
+
+    public static void initialize() {
+        Constants.LOG.info("Registering Mod Items for " + Constants.MOD_ID);
+
+        WHITE_BEDROLL = registerBedrollItem("white_bedroll", ModBlocks.WHITE_BEDROLL, DyeColor.WHITE);
+        ORANGE_BEDROLL = registerBedrollItem("orange_bedroll", ModBlocks.ORANGE_BEDROLL, DyeColor.ORANGE);
+        MAGENTA_BEDROLL = registerBedrollItem("magenta_bedroll", ModBlocks.MAGENTA_BEDROLL, DyeColor.MAGENTA);
+        LIGHT_BLUE_BEDROLL = registerBedrollItem("light_blue_bedroll", ModBlocks.LIGHT_BLUE_BEDROLL, DyeColor.LIGHT_BLUE);
+        YELLOW_BEDROLL = registerBedrollItem("yellow_bedroll", ModBlocks.YELLOW_BEDROLL, DyeColor.YELLOW);
+        LIME_BEDROLL = registerBedrollItem("lime_bedroll", ModBlocks.LIME_BEDROLL, DyeColor.LIME);
+        PINK_BEDROLL = registerBedrollItem("pink_bedroll", ModBlocks.PINK_BEDROLL, DyeColor.PINK);
+        GRAY_BEDROLL = registerBedrollItem("gray_bedroll", ModBlocks.GRAY_BEDROLL, DyeColor.GRAY);
+        LIGHT_GRAY_BEDROLL = registerBedrollItem("light_gray_bedroll", ModBlocks.LIGHT_GRAY_BEDROLL, DyeColor.LIGHT_GRAY);
+        CYAN_BEDROLL = registerBedrollItem("cyan_bedroll", ModBlocks.CYAN_BEDROLL, DyeColor.CYAN);
+        PURPLE_BEDROLL = registerBedrollItem("purple_bedroll", ModBlocks.PURPLE_BEDROLL, DyeColor.PURPLE);
+        BLUE_BEDROLL = registerBedrollItem("blue_bedroll", ModBlocks.BLUE_BEDROLL, DyeColor.BLUE);
+        BROWN_BEDROLL = registerBedrollItem("brown_bedroll", ModBlocks.BROWN_BEDROLL, DyeColor.BROWN);
+        GREEN_BEDROLL = registerBedrollItem("green_bedroll", ModBlocks.GREEN_BEDROLL, DyeColor.GREEN);
+        RED_BEDROLL = registerBedrollItem("red_bedroll", ModBlocks.RED_BEDROLL, DyeColor.RED);
+        BLACK_BEDROLL = registerBedrollItem("black_bedroll", ModBlocks.BLACK_BEDROLL, DyeColor.BLACK);
+    }
 
     private static Item registerBedrollItem(String name, Block bedrollBlock, DyeColor color) {
         return registerItem(name, new BedItem(bedrollBlock, new Item.Properties()
@@ -40,10 +61,6 @@ public class ModItems {
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(BuiltInRegistries.ITEM, ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, name), item);
-    }
-
-    public static void initialize() {
-        Constants.LOG.info("Registering Mod Items for " + Constants.MOD_ID);
     }
 
 }

@@ -21,7 +21,6 @@ public class CommonClass {
             Constants.LOG.info("Hello to " + Constants.MOD_NAME);
         }
 
-
     }
 
 }

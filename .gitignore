@@ -3,4 +3,5 @@
 build/
 fabric/runs
 neoforge/run
-src/main/generated/.cache
+src/main/generated/resources/.cache
+src/

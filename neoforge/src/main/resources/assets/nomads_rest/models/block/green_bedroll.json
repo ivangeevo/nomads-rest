@@ -1,4 +1,5 @@
 {
+  "render_type": "neoforge:entity_solid",
   "textures": {
     "particle": "block/green_wool"
   }

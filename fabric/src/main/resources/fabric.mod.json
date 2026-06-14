@@ -16,7 +16,8 @@
   "environment": "*",
   "entrypoints": {
     "main": ["org.btwr.nomads_rest.NomadsRestMod"],
-    "client": ["org.btwr.nomads_rest.client.NomadsRestModClient"]
+    "client": ["org.btwr.nomads_rest.client.NomadsRestModClient"],
+    "fabric-datagen": ["org.btwr.nomads_rest.datagen.ModDataGenerator"]
   },
   "mixins": [
     "${mod_id}.mixins.json",
