@@ -4,24 +4,19 @@ import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
-import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.loading.FMLEnvironment;
-import net.neoforged.neoforge.common.CreativeModeTabRegistry;
-import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.registries.RegisterEvent;
 import org.btwr.nomads_rest.block.ModBlocks;
 import org.btwr.nomads_rest.block.entity.BedrollBlockEntity;
 import org.btwr.nomads_rest.block.entity.ModBlockEntities;
-import org.btwr.nomads_rest.client.block.NomadsRestModClient;
+import org.btwr.nomads_rest.client.NomadsRestModClient;
 import org.btwr.nomads_rest.item.ModItems;
 
-import static net.minecraft.world.item.CreativeModeTabs.COLORED_BLOCKS;
 import static net.minecraft.world.item.CreativeModeTabs.FUNCTIONAL_BLOCKS;
 
 @Mod(Constants.MOD_ID)

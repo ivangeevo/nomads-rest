@@ -35,13 +35,10 @@ loom {
         }
         datagenClient {
             inherit client
-
             name "Fabric Data"
-
             vmArg "-Dfabric-api.datagen"
-            vmArg "-Dfabric-api.datagen.output-dir=${file("../common/src/generated")}"
+            vmArg "-Dfabric-api.datagen.output-dir=${file("../common/src/generated/resources")}"
             vmArg "-Dfabric-api.datagen.modid=${mod_id}"
-
             runDir "build/datagen"
         }
     }
@@ -50,7 +47,7 @@ loom {
 sourceSets {
     main {
         resources {
-            srcDir project(':common').file('src/generated')
+            srcDir project(':common').file('src/generated/resources')
         }
     }
 }
