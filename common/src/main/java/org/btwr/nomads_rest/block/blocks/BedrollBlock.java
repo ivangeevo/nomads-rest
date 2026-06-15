@@ -35,4 +35,5 @@ public class BedrollBlock extends BedBlock {
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
         return new BedrollBlockEntity(pos, state, this.getColor());
     }
+
 }

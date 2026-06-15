@@ -14,8 +14,7 @@ import java.util.function.Supplier;
 @Mixin(ServerTickRateManager.class)
 public abstract class ServerTickRateManagerMixin implements SleepFeedback {
 
-    @Unique
-    private boolean nomads_rest$noFeedbackForSleep = false;
+    @Unique private boolean nomads_rest$noFeedbackForSleep = false;
 
     public void nomads_rest$setNoFeedbackForSleep(boolean value) {
         this.nomads_rest$noFeedbackForSleep = value;

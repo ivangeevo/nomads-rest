@@ -33,7 +33,6 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.GREEN_BEDROLL)
                 .add(ModBlocks.RED_BEDROLL)
                 .add(ModBlocks.BLACK_BEDROLL);
-
     }
 
 }

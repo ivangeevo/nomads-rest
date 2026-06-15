@@ -32,4 +32,5 @@ public abstract class SleepStatusMixin {
             tickManager.stopSprinting();
         }
     }
+
 }

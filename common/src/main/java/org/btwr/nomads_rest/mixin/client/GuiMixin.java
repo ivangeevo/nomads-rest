@@ -1,6 +1,5 @@
 package org.btwr.nomads_rest.mixin.client;
 
-import com.mojang.authlib.minecraft.client.MinecraftClient;
 import net.minecraft.client.DeltaTracker;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Gui;
@@ -30,4 +29,5 @@ public abstract class GuiMixin {
             ci.cancel();
         }
     }
+
 }

@@ -20,7 +20,6 @@ public class CommonClass {
         if (Services.PLATFORM.isModLoaded(Constants.MOD_ID)) {
             Constants.LOG.info("Hello to " + Constants.MOD_NAME);
         }
-
     }
 
 }

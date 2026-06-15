@@ -74,7 +74,6 @@ public abstract class ServerLevelMixin extends Level {
             }
 
             if (!serverTickRateManager.isSprinting()) {
-
                 if (serverTickRateManager instanceof SleepFeedback feedback) {
                     feedback.nomads_rest$setNoFeedbackForSleep(true);
                 }

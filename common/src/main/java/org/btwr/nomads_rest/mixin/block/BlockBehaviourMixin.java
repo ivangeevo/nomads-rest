@@ -1,6 +1,5 @@
 package org.btwr.nomads_rest.mixin.block;
 
-
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.LevelReader;
@@ -35,5 +34,5 @@ public abstract class BlockBehaviourMixin {
             cir.setReturnValue(false);
         }
     }
-}
 
+}
