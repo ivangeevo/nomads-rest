@@ -1,4 +1,6 @@
 ## v???(dev)
++ Fixed bedrolls making a wooden sound when being placed
++ Updated the mod to Fabric API 0.116.15 & Fabric Loader 0.19.3
 
 ## v1.3
 + Ported the mod to Neoforge (Multiloader template)

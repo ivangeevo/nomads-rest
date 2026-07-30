@@ -58,7 +58,7 @@ public class ModBlocks {
     private static Block createBedrollBlock(DyeColor color) {
         return new BedrollBlock(color, BlockBehaviour.Properties.of()
                 .mapColor(state -> state.getValue(BedrollBlock.PART) == BedPart.FOOT ? color.getMapColor() : MapColor.SNOW)
-                .sound(SoundType.WOOD)
+                .sound(SoundType.WOOL)
                 .strength(0.2f)
                 .noOcclusion()
                 .ignitedByLava()
