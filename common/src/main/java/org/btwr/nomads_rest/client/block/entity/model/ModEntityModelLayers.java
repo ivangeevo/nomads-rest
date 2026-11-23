@@ -8,12 +8,10 @@ import org.btwr.nomads_rest.Constants;
 import java.util.Set;
 
 public class ModEntityModelLayers {
-
     private static final String MAIN = "main";
     private static final Set<ModelLayerLocation> LAYERS = Sets.newHashSet();
     public static final ModelLayerLocation BEDROLL_FOOT = registerMain("bedroll_foot");
     public static final ModelLayerLocation BEDROLL_HEAD = registerMain("bedroll_head");
-
 
     private static ModelLayerLocation registerMain(String id) {
         return ModEntityModelLayers.register(id, MAIN);
@@ -30,5 +28,4 @@ public class ModEntityModelLayers {
     private static ModelLayerLocation create(String id, String layer) {
         return new ModelLayerLocation(ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, id), layer);
     }
-
 }

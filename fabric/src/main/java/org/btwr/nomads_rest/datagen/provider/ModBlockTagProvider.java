@@ -9,7 +9,6 @@ import org.btwr.nomads_rest.tag.ModTags;
 import java.util.concurrent.CompletableFuture;
 
 public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
-
     public ModBlockTagProvider(FabricDataOutput output, CompletableFuture<HolderLookup.Provider> registriesFuture) {
         super(output, registriesFuture);
     }
@@ -34,5 +33,4 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.RED_BEDROLL)
                 .add(ModBlocks.BLACK_BEDROLL);
     }
-
 }

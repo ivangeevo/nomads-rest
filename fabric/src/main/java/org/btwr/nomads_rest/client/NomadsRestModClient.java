@@ -17,7 +17,6 @@ import org.btwr.nomads_rest.client.block.entity.renderer.BedrollBlockEntityRende
 import org.btwr.nomads_rest.item.ModItems;
 
 public class NomadsRestModClient implements ClientModInitializer {
-
     public static final ResourceLocation BEDROLLS_ATLAS_TEXTURE = ResourceLocation.fromNamespaceAndPath(
             Constants.MOD_ID, "textures/atlas/bedrolls.png"
     );
@@ -26,7 +25,6 @@ public class NomadsRestModClient implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
-
         // Register the RenderLayer for the Bedrolls
         BlockRenderLayerMap.INSTANCE.putBlocks(BEDROLLS_RENDER_LAYER,
                 ModBlocks.WHITE_BEDROLL,
@@ -83,7 +81,5 @@ public class NomadsRestModClient implements ClientModInitializer {
                 ModItems.RED_BEDROLL,
                 ModItems.BLACK_BEDROLL
         );
-
     }
-
 }

@@ -13,7 +13,6 @@ import java.util.function.Supplier;
 
 @Mixin(ServerTickRateManager.class)
 public abstract class ServerTickRateManagerMixin implements SleepFeedback {
-
     @Unique private boolean nomads_rest$noFeedbackForSleep = false;
 
     public void nomads_rest$setNoFeedbackForSleep(boolean value) {
@@ -33,5 +32,4 @@ public abstract class ServerTickRateManagerMixin implements SleepFeedback {
         }
         this.nomads_rest$noFeedbackForSleep = false; // always reset
     }
-    
 }

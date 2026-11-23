@@ -14,6 +14,10 @@ dependencies {
     // EMI
     modCompileOnly "dev.emi:emi-fabric:${emi_version}:api"
     modLocalRuntime "dev.emi:emi-fabric:${emi_version}"
+
+    // Mod Menu
+    modCompileOnly "com.terraformersmc:modmenu:${mod_menu_version}"
+    modLocalRuntime "com.terraformersmc:modmenu:${mod_menu_version}"
 }
 
 loom {

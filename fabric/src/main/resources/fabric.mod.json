@@ -12,12 +12,13 @@
     "sources": "https://github.com/ivangeevo/nomads-rest"
   },
   "license": "${license}",
-  "icon": "${mod_id}.png",
+  "icon": "assets/${mod_id}/icon.png",
   "environment": "*",
   "entrypoints": {
     "main": ["org.btwr.nomads_rest.NomadsRestMod"],
     "client": ["org.btwr.nomads_rest.client.NomadsRestModClient"],
-    "fabric-datagen": ["org.btwr.nomads_rest.datagen.ModDataGenerator"]
+    "fabric-datagen": ["org.btwr.nomads_rest.datagen.ModDataGenerator"],
+    "modmenu": ["org.btwr.nomads_rest.client.NomadsRestModMenu"]
   },
   "mixins": [
     "${mod_id}.mixins.json",
@@ -30,6 +31,6 @@
     "java": ">=${java_version}"
   },
   "suggests": {
-    "another-mod": "*"
+    "modmenu": "*"
   }
 }

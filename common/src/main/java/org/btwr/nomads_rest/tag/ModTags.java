@@ -9,9 +9,7 @@ import net.minecraft.world.level.block.Block;
 import org.btwr.nomads_rest.Constants;
 
 public class ModTags {
-
     public static class Blocks {
-
         public static final TagKey<Block> BEDROLLS = createTag("bedrolls");
 
         private static TagKey<Block> createTag(String path) {
@@ -20,12 +18,10 @@ public class ModTags {
     }
 
     public static class Items {
-
         public static final TagKey<Item> BEDROLLS = createTag("bedrolls");
 
         private static TagKey<Item> createTag(String path) {
             return TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, path));
         }
     }
-
 }

@@ -16,7 +16,6 @@ import org.btwr.nomads_rest.Constants;
 import org.btwr.nomads_rest.block.blocks.BedrollBlock;
 
 public class ModBlocks {
-
     public static Block WHITE_BEDROLL;
     public static Block ORANGE_BEDROLL;
     public static Block MAGENTA_BEDROLL;
@@ -80,5 +79,4 @@ public class ModBlocks {
                 new BlockItem(block, new Item.Properties())
         );
     }
-
 }

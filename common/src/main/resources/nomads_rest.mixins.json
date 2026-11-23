@@ -8,12 +8,15 @@
     "ServerLevelMixin",
     "ServerTickRateManagerMixin",
     "SleepStatusMixin",
+    "accessor.ServerLevelSleepAccessor",
     "block.BlockBehaviourMixin",
     "block.BlockMixin",
     "block.BlockStateBaseMixin",
+    "entity.PlayerMixin",
     "entity.ServerPlayerMixin"
   ],
   "client": [
+    "client.GameRendererMixin",
     "client.GuiMixin"
   ],
   "server": [],

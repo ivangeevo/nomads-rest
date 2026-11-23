@@ -31,4 +31,12 @@ Nomad’s Rest changes how sleeping works in Minecraft. Beds are no longer porta
 
 ---
 
+### ⚙️ Config
+Change settings in-game from Mod Menu on Fabric or the mods list on NeoForge. Dedicated servers use `config/btwr/nomads_rest.toml`, and need a restart after editing it.
+- **Sleeping:** switch back to the vanilla night skip, choose the time you wake up, and choose whether waking clears the weather.
+- **Bedrolls:** let them set your spawn, reduce fall damage, and stop them exploding in the Nether and the End.
+- **Sleep screen:** switch off the pitch black fade or hiding the world while asleep.
+
+---
+
 Nomad’s Rest makes sleep more immersive and balanced, especially for players on the move.
