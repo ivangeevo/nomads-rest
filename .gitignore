@@ -4,10 +4,9 @@ build/
 buildSrc/.gradle
 buildSrc/build
 common/build
+common/src/generated/resources/.cache
 fabric/.gradle
 fabric/build
 fabric/runs
 neoforge/build
-neoforge/run
-src/main/generated/resources/.cache
-src/
+neoforge/runs

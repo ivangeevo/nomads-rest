@@ -7,6 +7,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
+import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.loading.FMLEnvironment;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
@@ -16,20 +17,23 @@ import org.btwr.nomads_rest.block.entity.BedrollBlockEntity;
 import org.btwr.nomads_rest.block.entity.ModBlockEntities;
 import org.btwr.nomads_rest.client.NomadsRestModClient;
 import org.btwr.nomads_rest.item.ModItems;
+import org.btwr.nomads_rest.platform.NeoForgeSoundRegistration;
+import org.btwr.nomads_rest.recipe.ModRecipes;
 
 import static net.minecraft.world.item.CreativeModeTabs.FUNCTIONAL_BLOCKS;
 
 @Mod(Constants.MOD_ID)
 public class NomadsRestMod {
-
-    public NomadsRestMod(IEventBus eventBus) {
+    public NomadsRestMod(IEventBus eventBus, ModContainer container) {
         CommonClass.init();
+
+        NeoForgeSoundRegistration.SOUND_EVENTS.register(eventBus);
 
         eventBus.addListener(this::onRegister);
         eventBus.addListener(this::registerCreativeTabEntries);
 
         if (FMLEnvironment.dist == Dist.CLIENT) {
-            NomadsRestModClient.init(eventBus);
+            NomadsRestModClient.init(eventBus, container);
         }
     }
 
@@ -42,6 +46,9 @@ public class NomadsRestMod {
         }
         if (event.getRegistryKey() == Registries.BLOCK_ENTITY_TYPE) {
             registerBlockEntities();
+        }
+        if (event.getRegistryKey() == Registries.RECIPE_SERIALIZER) {
+            ModRecipes.initialize();
         }
     }
 
@@ -90,5 +97,4 @@ public class NomadsRestMod {
             event.accept(ModItems.BLACK_BEDROLL);
         }
     }
-
 }

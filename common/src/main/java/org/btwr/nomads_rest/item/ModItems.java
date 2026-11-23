@@ -13,7 +13,6 @@ import org.btwr.nomads_rest.Constants;
 import org.btwr.nomads_rest.block.ModBlocks;
 
 public class ModItems {
-
     public static Item WHITE_BEDROLL;
     public static Item ORANGE_BEDROLL;
     public static Item MAGENTA_BEDROLL;
@@ -62,5 +61,4 @@ public class ModItems {
     private static Item registerItem(String name, Item item) {
         return Registry.register(BuiltInRegistries.ITEM, ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, name), item);
     }
-
 }

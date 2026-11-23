@@ -11,15 +11,16 @@ import org.btwr.nomads_rest.block.ModBlocks;
 import org.btwr.nomads_rest.block.entity.BedrollBlockEntity;
 import org.btwr.nomads_rest.block.entity.ModBlockEntities;
 import org.btwr.nomads_rest.item.ModItems;
+import org.btwr.nomads_rest.recipe.ModRecipes;
 
 public class NomadsRestMod implements ModInitializer {
-
     @Override
     public void onInitialize() {
         CommonClass.init();
 
         ModBlocks.initialize();
         ModItems.initialize();
+        ModRecipes.initialize();
 
         this.registerBlockEntities();
         this.registerItemGroups();
@@ -88,6 +89,5 @@ public class NomadsRestMod implements ModInitializer {
             entries.accept(ModItems.RED_BEDROLL);
             entries.accept(ModItems.BLACK_BEDROLL);
         });
-
     }
 }

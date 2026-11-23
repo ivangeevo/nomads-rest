@@ -31,5 +31,4 @@ public class BedrollBlockEntity extends BlockEntity {
     public DyeColor getColor() {
         return this.color;
     }
-
 }

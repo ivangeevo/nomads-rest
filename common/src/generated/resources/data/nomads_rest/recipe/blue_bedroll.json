@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:blue_wool"
+    },
+    {
+      "item": "minecraft:blue_wool"
+    },
+    {
+      "tag": "c:strings"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "nomads_rest:blue_bedroll"
+  }
+}

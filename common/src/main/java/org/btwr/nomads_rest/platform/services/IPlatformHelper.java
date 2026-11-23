@@ -1,7 +1,8 @@
 package org.btwr.nomads_rest.platform.services;
 
-public interface IPlatformHelper {
+import java.nio.file.Path;
 
+public interface IPlatformHelper {
     /**
      * Gets the name of the current platform
      *
@@ -25,6 +26,13 @@ public interface IPlatformHelper {
     boolean isDevelopmentEnvironment();
 
     /**
+     * Gets the directory that mod config files are stored in.
+     *
+     * @return The path of the config directory.
+     */
+    Path getConfigDirectory();
+
+    /**
      * Gets the name of the environment type as a string.
      *
      * @return The name of the environment type.
@@ -32,5 +40,4 @@ public interface IPlatformHelper {
     default String getEnvironmentName() {
         return isDevelopmentEnvironment() ? "development" : "production";
     }
-
 }

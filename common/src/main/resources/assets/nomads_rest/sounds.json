@@ -1,0 +1,11 @@
+{
+  "bed_shatter": {
+    "subtitle": "subtitles.nomads_rest.bed_shatter",
+    "sounds": [
+      {
+        "name": "minecraft:entity.zombie.break.door",
+        "type": "event"
+      }
+    ]
+  }
+}

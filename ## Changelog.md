@@ -1,4 +1,17 @@
-## v???(dev)
+## v1.4
++ Added a config file (config/btwr/nomads_rest.toml) with settings for sleeping, bedrolls and the sleep screen
++ Added a settings screen that opens from Mod Menu on Fabric and the mods list on NeoForge. While connected to another server its server settings are locked, since those are only changed in the server's config file
++ Added crafting bedrolls and beds from mixed wool colors. The result gets the dye color closest to the blend of the wools. The wool used is set in the recipe JSON (nomads_rest:mixed_bedroll and nomads_rest:mixed_bed), so modpacks can swap it
++ Changed the world to stop rendering once the screen is fully black while sleeping
++ Changed players to stay asleep until the time-lapse reaches the wake time, instead of waking up just before it
++ Fixed bedrolls halving fall damage instead of not negating it
++ Fixed sleeping through rain not clearing it
++ Fixed colored bedrolls not dropping anything when broken
++ Fixed beds dropping their loot and making the break noise when broken in creative
++ Fixed beds dropping their loot twice when broken in survival
++ General code cleanup/optimization since the split to MultiLoader template
++ Updated Fabric in the mod to Fabric Loader 0.20.1 & Fabric API 0.116.18
++ Updated NeoForge in the mod to NeoForge 21.1.267
 
 ## v1.3.1
 + Fixed bedrolls making a wooden sound when being placed
